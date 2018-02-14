@@ -33,7 +33,7 @@
       when: ansible_os_family == "Debian"
 
     - name: Install neovim from ppa
-      apt: name="{{ boss__vim_neovim_name }}" state="{{ install_state }}"
+      apt: name="{{ boss__vim_neovim_name }}" state="{{ boss__vim_install_state }}"
 
     - name: use nvim for vi
       alternatives: name=vi path=/usr/bin/nvim
