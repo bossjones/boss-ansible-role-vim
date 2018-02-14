@@ -1,2 +1,5 @@
 ---
 # tasks file for boss-ansible-role-vim
+
+# tasks file for juliovp01.motd-tcl
+- include: neovim.yml

@@ -1,2 +1,7 @@
 ---
 # vars file for boss-ansible-role-vim
+boss__vim_default_xdg_config_home: "{{ ansible_user_dir }}/.config"
+
+boss__vim_default_pip2_name: pip
+boss__vim_default_pip3_name: pip3
+

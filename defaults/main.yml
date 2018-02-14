@@ -1,2 +1,47 @@
 ---
 # defaults file for boss-ansible-role-vim
+# boss__vim_env: system
+# boss__vim_version: v0.31.6
+# boss__vim_default_node_version: stable
+
+# boss__vim_node_versions:
+#   - stable
+
+boss__vim_global_packages: []
+boss__vim_users: []
+
+
+## neovim stuff
+
+# The specific package name used to install neovim
+boss__vim_neovim_name: neovim
+boss__vim_neovim_ppa: ppa:neovim-ppa/unstable
+
+# The base directory relative to which user specific configuration files should be stored
+boss__vim_config_dir: "{{ ansible_env.XDG_CONFIG_HOME | default(default_xdg_config_home) }}"
+
+boss__vim_neovim_config_dir: "{{ config_dir }}/nvim"
+
+# Whether or not to install or remove neovim
+# choices: [ present, absent, latest ]
+boss__vim_install_state: present
+
+# Whether or not to configure or remove configuration
+# choices: [ present, absent ]
+boss__vim_configure_state: present
+
+boss__vim_pip2_name: pip
+boss__vim_pip3_name: pip3
+
+# common required packages for python support
+boss__vim_python_required_packages:
+    - software-properties-common
+    - python-dev
+    - python-pip
+    - python3-dev
+    - python3-pip
+
+# you complete me
+boss__vim_ycm_packages:
+    - build-essential
+    - cmake
