@@ -45,3 +45,4 @@ boss__vim_python_required_packages:
 boss__vim_ycm_packages:
     - build-essential
     - cmake
+    - vim-nox
