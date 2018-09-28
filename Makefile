@@ -184,10 +184,11 @@ ifneq ($(strip $(exited)),)
 	docker rm -v $(exited)
 endif
 travis-osx:
-	$(MAKE) venv-osx
-	$(MAKE) upgrade-setuptools
-	$(MAKE) venv-osx
-	$(MAKE) ci
+	$(MAKE) venv-osx;\
+	$(MAKE) upgrade-setuptools;\
+	$(MAKE) venv-osx;\
+	$(MAKE) ci;\
+
 
 # OSX Order of operations, make travis-osx; . venv/bin/activate; make upgrade-setuptools; make travis-osx;
 

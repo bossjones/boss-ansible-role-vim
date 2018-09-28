@@ -81,7 +81,7 @@ verifier:
 scenario:
   name: default
   test_sequence:
-    - destroy
+    # - destroy
     - dependency
     - syntax
     - create
@@ -90,7 +90,7 @@ scenario:
     - lint
     - side_effect
     - verify
-    - destroy
+    # - destroy
 
 
 
